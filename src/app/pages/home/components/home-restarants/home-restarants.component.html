@@ -1,0 +1,37 @@
+<div class="home-restarants">
+    <div class="home-restarants-container">
+        <p class="home-restarants__title">Nearby restaurants</p>
+        <div class="home-restarants-list">
+           
+            <div class="home-restarants-list__item" *ngFor="let item of restaraunts">
+
+                <img [src]="item.img1" [alt]="item.name" >
+
+                <div class="list__item__desc">
+                    <div class="list__item__text">
+                        <p class="list__item__name">{{item.name}}</p>
+                        <img [src]="item.bag" alt="bag">
+                        <span *ngIf="item.number" class="list__item__number">{{item.number}}</span>
+                    </div>
+                    <div class="list__item__time">
+                        <img [src]="item.img2" alt="clock">
+                        <div class="list__item__time_text">
+                            <p >{{item.time}}</p>
+                            <img src="assets/Ellipse 1.svg" alt="">
+                            <p>{{item.price}}</p>
+                        </div>
+                    </div>
+
+                    <div class="list__item-container">
+                        <div class="list__item__icons" *ngFor="let tag of item.tags">
+                            <div class="list__item__icons__img">
+                                <img [src]="tag.img3" [alt]="tag.title">
+                            </div>
+                            <p class="list__item__icons__name">{{tag.title}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

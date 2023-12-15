@@ -1,0 +1,125 @@
+.header{
+
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1110px;
+        margin-inline: auto;
+        padding: 20px 0;
+    }
+
+    &__logo-section{
+        display: flex;
+        gap: 48px;
+        align-items: center;
+    }
+
+    &__navagation{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        &__ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+
+            span{
+                width: 1px;
+                height: 32px;
+                background: var(--neutral-gray-lightest);
+            }
+
+            .li-active{
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__icons{
+        display: flex;
+        align-items: center;
+    }
+
+    &__cart{
+        border-radius: 16px;
+        background: var(--primary-light);
+        padding: 14px;
+        display: flex;
+        position: relative;
+        cursor: pointer;
+
+    }
+
+    &__search{
+        background: var(--neutral-gray-lightest);
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        max-width: 200px;
+        align-items: center;
+        display: flex;
+        gap: 22px;
+        max-width: 224px;
+
+        img{
+            cursor: pointer;
+        }
+
+        &__input{
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+        }   
+    }
+
+    .ul_links{
+        color: var(--neutral-black);
+        text-align: right;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        position: relative;
+    }
+    .ul_links:after{
+        content: "";
+        position: absolute;
+        background-color: var(--primary-defult);
+        height: 1px;
+        width: 0;
+        left: 0;
+        bottom: -3px;
+        transition: 0.4s;
+        border-radius: 16px;
+    }
+
+    .ul_links:hover:after{
+        width: 100%;
+    }
+
+    .header__cart__number{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 8px;
+        background: var(--primary-defult);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        color: var(--neutral-white);
+        text-align: center;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        top: -19px;
+        right: 21%;
+    }
+}

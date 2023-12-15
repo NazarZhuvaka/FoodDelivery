@@ -1,0 +1,127 @@
+@import 'vars';
+
+
+
+.home-restarants{
+    &-container{
+        max-width: 1110px;
+        margin-inline:auto;
+    }
+
+    &__title{
+        margin-top: 40px;
+        margin-bottom: 16px;
+        color: var(--neutral-black);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+    }
+
+    &-list{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 30px;
+
+        
+    }
+
+    &-list__item{
+        border-radius: 16px;
+        border: 1px solid var(--neutral-gray-lightest);
+        background: var(--neutral-white);
+    }
+
+    .list__item{
+        &__text{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            position: relative;
+        }
+
+        &-container{
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        &__name{
+            color: var(--neutral-black);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+        }
+
+        &__time{
+            display: flex;
+            margin-bottom: 14px;
+            gap: 6px;
+            align-items: center;
+
+            &_text{
+                display: flex;
+                gap: 8px;
+
+                P{
+                    color: var(--neutral-gray);
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        &__desc{
+            padding: 16px;
+        }
+
+        &__icons{
+            display: flex;
+            gap: 8px;
+            border-radius: 100px;
+            background: var(--neutral-gray-lightest);
+            padding: 4px 10px;
+            align-items: center;
+            max-width: 75px;
+            cursor: pointer;
+
+            &__img{
+                display: flex;
+
+                img{
+                    max-width: 12px;
+                }
+            }
+
+            &__name{
+                color: var(--neutral-gray-dark);
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 16px;
+
+
+            }
+        }
+    }
+
+    .list__item__number{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background: var(--primary-defult);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        color: var(--neutral-white);
+        text-align: center;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        top: -6px;
+        right: -3%;
+    }
+}
